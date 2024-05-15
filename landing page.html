@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery</title>
+    <style>
+        /* Resetting default styles */
+        button {
+       background-color:white;
+       color:red;
+       height:38px;
+       width :100px;
+       border:none;
+       border-radius:7px;
+       cursor:pointer;
+       transition:opacity  1s;
+    }
+    button:hover{
+      background-color:red;
+      color:white;
+     }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #e21737;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 30px;
+        }
+
+        .pizza {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pizza-item {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .pizza-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pizza Delivery</h1>
+        <p>Order delicious pizzas online!</p>
+    </header>
+
+    <nav>
+        <a href="#"><button>Home</button></a>
+        <a href="#"><button>Types of Pizzas</button></a>
+        <a href="#"><button>Offers</button></a>
+        <a href="#"><button>Your Order</button></a>
+        <a href="#"><button>Cart</button></a>
+        <a href="#"><button>Login</button></a>
+        <a href="#"><button>Help</button></a>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h2>Types of Pizzas Available</h2>
+            <div class="pizza">
+                <div class="pizza-item">
+                    <img src="https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-margherita-pizza-in-a-dish-png-image_10012685.png" alt="Margherita">
+                    <h3>Margherita</h3>
+                    <p>$9.99</p>
+                </div>
+                <div class="pizza-item">
+                    <img src="https://image.similarpng.com/very-thumbnail/2022/03/Delicious-Pepperoni-pizza-on-transparent-background-PNG.png" alt="Pepperoni">
+                    <h3>Pepperoni</h3>
+                    <p>$11.99</p>
+                </div>
+                <div class="pizza-item">
+                    <img src="https://www.pngitem.com/pimgs/m/248-2486892_veg-pizza-png-transparent-png.png" alt="Vegetarian">
+                    <h3>Vegetarian</h3>
+                    <p>$10.99</p>
+                </div>
+                <!-- Add more pizza items as needed -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy;Pizza Delivery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
