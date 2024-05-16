@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: 1920px 1080px;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 50%;
+        margin: 100px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    input[type="text"] {
+        width: 70%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+        border-color: dodgerblue;
+    }
+
+    input[type="submit"] {
+        padding: 8px 20px;
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: royalblue;
+    }
+
+    label:hover {
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>TO DO LIST</h1>
+    <ul id="todo-list">
+        <!-- To-do list items will be added here -->
+    </ul>
+    <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add new item">
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+<script>
+    document.getElementById('todo-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var todoInput = document.getElementById('todo-input');
+        var todoText = todoInput.value.trim();
+        if (todoText !== '') {
+            addTodoItem(todoText);
+            todoInput.value = '';
+        }
+    });
+
+    function addTodoItem(todoText) {
+        var todoList = document.getElementById('todo-list');
+        var listItem = document.createElement('li');
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        var label = document.createElement('label');
+        label.textContent = todoText;
+        listItem.appendChild(checkbox);
+        listItem.appendChild(label);
+        todoList.appendChild(listItem);
+    }
+</script>
+
+</body>
+</html>
